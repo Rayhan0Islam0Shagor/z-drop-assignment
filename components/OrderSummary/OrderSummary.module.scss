@@ -1,0 +1,86 @@
+.order__summary {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  min-height: 30vh;
+
+  .headline {
+    border-bottom: 1px solid #e9e9e9;
+    padding: 10px 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .price__section {
+    padding: 5px 10px;
+    border-bottom: 2px dashed #e9e9e9;
+
+    .price {
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .options {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+
+    p {
+      width: 240px;
+
+      @media screen and (max-width: 850px) {
+        width: 100%;
+      }
+    }
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  .coupon__apply__form {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 0 10px;
+
+    input {
+      font-size: 16px;
+      padding: 7px 10px;
+      width: 100%;
+      border: 1px solid #e9e9e9;
+      transition: all 0.3s;
+
+      &:focus {
+        outline: none;
+        border: 1ps solid #e5e5e5;
+      }
+    }
+
+    button {
+      font-size: 16px;
+      padding: 7px 20px;
+      outline: none;
+      border: 1px solid #e9e9e9;
+      color: #a0a0a0;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  .total {
+    border-top: 2px dashed #e9e9e9;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
