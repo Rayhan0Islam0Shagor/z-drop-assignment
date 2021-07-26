@@ -1,0 +1,95 @@
+.layout {
+  //   min-height: 50vh;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  color: #4d4d4d;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    padding: 10px;
+
+    .left {
+      display: flex;
+
+      .logo {
+        height: 45px;
+        width: 45px;
+        margin-right: 10px;
+
+        div {
+          border-radius: 50%;
+        }
+      }
+
+      .headlines {
+        .brand__name {
+          display: flex;
+          align-items: center;
+
+          p {
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: #4d4d4d;
+          }
+
+          .sign {
+            height: 20px;
+            width: 20px;
+            margin-left: 5px;
+            background-color: #4b99ff;
+            border-radius: 50%;
+
+            svg {
+              width: 100%;
+              fill: #fff;
+            }
+          }
+        }
+      }
+
+      .subHeading {
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+        color: #727272;
+      }
+    }
+
+    .right {
+      p,
+      h4 {
+        text-align: right;
+        color: #727272;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .footer {
+    color: #4d4d4d;
+    border-top: 1px solid rgba(128, 128, 128, 0.2);
+
+    p {
+      margin: 0;
+      padding: 10px;
+    }
+  }
+}
+
+.dottedLine {
+  margin: 25px 0;
+  border-bottom: 2px dashed rgba(0, 0, 0, 0.301);
+
+  &:last-child {
+    display: none;
+  }
+}

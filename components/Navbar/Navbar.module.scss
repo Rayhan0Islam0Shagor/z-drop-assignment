@@ -1,0 +1,16 @@
+.link {
+  cursor: auto !important;
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    height: 60px;
+    background-color: #c9c9c919;
+    border-bottom: 1px solid #eee;
+
+    .logo {
+      cursor: pointer;
+    }
+  }
+}
