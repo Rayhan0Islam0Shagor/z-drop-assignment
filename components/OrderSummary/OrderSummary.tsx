@@ -3,7 +3,7 @@ import styles from './OrderSummary.module.scss';
 import * as IoIcons from 'react-icons/io';
 
 const OrderSummary = () => {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   const handleClick = () => {
     setVisible(!visible);
@@ -38,7 +38,7 @@ const OrderSummary = () => {
 
       <div className={styles.options} onClick={handleClick}>
         <p>Gift Card, Coupons & Promotional Codes</p>
-        {visible ? <IoIcons.IoIosArrowDown /> : <IoIcons.IoIosArrowUp />}
+        {visible ? <IoIcons.IoIosArrowUp /> : <IoIcons.IoIosArrowDown />}
       </div>
 
       {visible && (
