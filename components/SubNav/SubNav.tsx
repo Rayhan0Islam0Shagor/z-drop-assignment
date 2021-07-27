@@ -1,10 +1,9 @@
 import { FC } from 'react';
 import styles from './SubNav.module.scss';
 
-import { NavLinks } from '../../types/types';
 import { NavbarLinks } from '../../data/data';
 
-const SubNav: FC<{ navLinks: NavLinks }> = () => {
+const SubNav: FC = () => {
   return (
     <div className={styles.subNav}>
       {NavbarLinks.map((navLink, i) => {

@@ -36,14 +36,10 @@ const OrderSummary = () => {
         </div>
       </div>
 
-      <div className={styles.options}>
+      <div className={styles.options} onClick={handleClick}>
         <p>Gift Card, Coupons & Promotional Codes</p>
 
-        {visible ? (
-          <IoIcons.IoIosArrowDown onClick={handleClick} />
-        ) : (
-          <IoIcons.IoIosArrowUp onClick={handleClick} />
-        )}
+        {visible ? <IoIcons.IoIosArrowDown /> : <IoIcons.IoIosArrowUp />}
       </div>
 
       <form className={styles.coupon__apply__form} onSubmit={submitHandler}>

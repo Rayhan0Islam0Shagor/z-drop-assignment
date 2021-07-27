@@ -15,3 +15,11 @@ a {
   margin: 0;
   box-sizing: border-box;
 }
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

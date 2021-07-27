@@ -31,6 +31,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0px 10px;
+    cursor: pointer;
 
     p {
       width: 240px;
@@ -38,10 +39,6 @@
       @media screen and (max-width: 850px) {
         width: 100%;
       }
-    }
-
-    svg {
-      cursor: pointer;
     }
   }
 
