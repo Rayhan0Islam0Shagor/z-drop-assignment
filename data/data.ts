@@ -72,7 +72,7 @@ export const Order: Orders[] = [
         quantity: 2,
         price: 1000,
         offer_price: 500,
-        offer: 25,
+        offer: '',
         size: ['xl'],
       },
     ],
