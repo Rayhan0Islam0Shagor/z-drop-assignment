@@ -38,9 +38,18 @@ const OrderSummary = () => {
 
       <div className={styles.options} onClick={handleClick}>
         <p>Gift Card, Coupons & Promotional Codes</p>
-
         {visible ? <IoIcons.IoIosArrowDown /> : <IoIcons.IoIosArrowUp />}
       </div>
+
+      {visible && (
+        <ul className={styles.list_of_offer}>
+          <li>offer-1</li>
+          <li>offer-2</li>
+          <li>offer-3</li>
+          <li>offer-4</li>
+          <li>offer-5</li>
+        </ul>
+      )}
 
       <form className={styles.coupon__apply__form} onSubmit={submitHandler}>
         <input type="text" placeholder="Voucher Code" />
