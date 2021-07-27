@@ -25,9 +25,12 @@
     }
   }
 
-  .list_of_offer {
-    list-style: none;
-    padding: 0 10px;
+  .voucher {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
   }
 
   .options {

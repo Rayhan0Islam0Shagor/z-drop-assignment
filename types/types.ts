@@ -16,6 +16,13 @@ export interface Orders {
   products: Products[];
 }
 
+export interface Offers {
+  id: string | number;
+  Offer_desc: string;
+  amountOfDiscount: number;
+  code: string | number;
+}
+
 export interface Products {
   id: string | number;
   name: string;

@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import styles from './OrderSummary.module.scss';
 import * as IoIcons from 'react-icons/io';
+import { Vouchers } from '../../data/data';
 
 const OrderSummary = () => {
   const [visible, setVisible] = useState(false);
+  const [voucher, setVoucher] = useState(null);
 
   const handleClick = () => {
     setVisible(!visible);
@@ -42,17 +44,22 @@ const OrderSummary = () => {
       </div>
 
       {visible && (
-        <ul className={styles.list_of_offer}>
-          <li>offer-1</li>
-          <li>offer-2</li>
-          <li>offer-3</li>
-          <li>offer-4</li>
-          <li>offer-5</li>
-        </ul>
+        <div>
+          {Vouchers.map((voucher) => (
+            <div
+              key={voucher.id}
+              onClick={() => setVoucher(voucher.code)}
+              className={styles.voucher}
+            >
+              <p>{voucher.Offer_desc}</p>
+              <span>{voucher.amountOfDiscount}%</span>
+            </div>
+          ))}
+        </div>
       )}
 
       <form className={styles.coupon__apply__form} onSubmit={submitHandler}>
-        <input type="text" placeholder="Voucher Code" />
+        <input type="text" placeholder="Voucher Code" defaultValue={voucher} />
         <button type="submit">Apply</button>
       </form>
 

@@ -2,7 +2,7 @@ import * as FaIcons from 'react-icons/fa';
 import * as GoIcons from 'react-icons/go';
 import * as MdIcons from 'react-icons/md';
 
-import { NavLinks, Orders } from '../types/types';
+import { NavLinks, Orders, Offers } from '../types/types';
 
 export const NavbarLinks: NavLinks[] = [
   {
@@ -19,6 +19,27 @@ export const NavbarLinks: NavLinks[] = [
   },
 ];
 
+export const Vouchers: Offers[] = [
+  {
+    id: 1,
+    Offer_desc: 'get upto 25% offer for 3000',
+    amountOfDiscount: 25,
+    code: 'VOUCHER_1',
+  },
+  {
+    id: 2,
+    Offer_desc: 'get upto 50% offer for 50000',
+    amountOfDiscount: 50,
+    code: 'VOUCHER_2',
+  },
+  {
+    id: 3,
+    Offer_desc: 'get upto 10% offer for 1000',
+    amountOfDiscount: 10,
+    code: 'VOUCHER_3',
+  },
+];
+
 export const Order: Orders[] = [
   {
     id: 1,
@@ -32,7 +53,7 @@ export const Order: Orders[] = [
     products: [
       {
         id: 1,
-        name: 'shoe',
+        name: 'Men Striped Casual Spread Shirt Super Skinny Fit Low',
         img: '/images/product_1.png',
         color: ['red'],
         quantity: 1,
@@ -43,7 +64,7 @@ export const Order: Orders[] = [
       },
       {
         id: 2,
-        name: 'shoe',
+        name: 'Men Striped Casual Spread Shirt Super Skinny Fit Low',
         img: '/images/product_2.png',
         color: ['red'],
         quantity: 1,
@@ -66,7 +87,7 @@ export const Order: Orders[] = [
     products: [
       {
         id: 1,
-        name: 'shoe',
+        name: 'Men Striped Casual Spread Shirt Super Skinny Fit Low',
         img: '/images/product_3.png',
         color: ['red'],
         quantity: 2,
