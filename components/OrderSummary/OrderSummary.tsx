@@ -22,8 +22,9 @@ const OrderSummary = () => {
     const discountPrice = Math.floor(
       subTotal * (voucher.amountOfDiscount / 100)
     ).toFixed(2);
-
     setDiscount(Number(discountPrice));
+
+    setVoucher(null);
   };
 
   const total = subTotal - discount + shippingCharge;
@@ -80,7 +81,9 @@ const OrderSummary = () => {
           placeholder="Voucher Code"
           defaultValue={voucher?.code}
         />
-        <button type="submit">Apply</button>
+        <button type="submit" style={{ color: voucher ? 'black' : '' }}>
+          Apply
+        </button>
       </form>
 
       {voucher && (
