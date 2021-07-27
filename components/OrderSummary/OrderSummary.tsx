@@ -19,6 +19,7 @@ const OrderSummary = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+
     const discountPrice = Math.floor(
       subTotal * (voucher.amountOfDiscount / 100)
     ).toFixed(2);
@@ -58,7 +59,7 @@ const OrderSummary = () => {
       </div>
 
       {visible && (
-        <div>
+        <div className={styles.list__of__boucher}>
           {Vouchers.map((voucher) => (
             <div
               key={voucher.id}

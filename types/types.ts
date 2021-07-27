@@ -30,7 +30,7 @@ export interface Products {
   color: Color[];
   quantity: number;
   price: number;
-  offer_price: number;
+  old_price: number;
   offer: string | number;
   size: Size[];
 }

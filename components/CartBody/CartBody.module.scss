@@ -56,6 +56,10 @@
         margin-left: 5px;
       }
     }
+
+    @media screen and (max-width: 565px) {
+      padding: 0 5px 0 0;
+    }
   }
 }
 

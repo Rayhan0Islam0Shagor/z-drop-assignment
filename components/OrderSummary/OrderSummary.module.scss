@@ -25,12 +25,39 @@
     }
   }
 
-  .voucher {
-    padding: 5px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
+  .list__of__boucher {
+    height: 100px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #ff6f00;
+      border-radius: 10px;
+    }
+
+    & {
+      -ms-overflow-style: scrollbar;
+      scrollbar-width: 5px;
+    }
+
+    .voucher {
+      padding: 5px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+
+      span {
+        padding: 3px;
+        background-color: #ff00511f;
+        color: #ff6f00;
+        border-radius: 10px;
+        font-weight: 500;
+      }
+    }
   }
 
   .options {

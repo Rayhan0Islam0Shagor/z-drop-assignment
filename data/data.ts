@@ -21,22 +21,22 @@ export const NavbarLinks: NavLinks[] = [
 
 export const Vouchers: Offers[] = [
   {
+    id: 3,
+    Offer_desc: 'get upto 10% offer for 1,000',
+    amountOfDiscount: 10,
+    code: 'GET10',
+  },
+  {
     id: 1,
-    Offer_desc: 'get upto 25% offer for 3000',
+    Offer_desc: 'get upto 25% offer for 10,000',
     amountOfDiscount: 25,
-    code: 'VOUCHER_1',
+    code: 'GET25',
   },
   {
     id: 2,
-    Offer_desc: 'get upto 50% offer for 50000',
+    Offer_desc: 'get upto 50% offer for 50,000',
     amountOfDiscount: 50,
-    code: 'VOUCHER_2',
-  },
-  {
-    id: 3,
-    Offer_desc: 'get upto 10% offer for 1000',
-    amountOfDiscount: 10,
-    code: 'VOUCHER_3',
+    code: 'GET50',
   },
 ];
 
@@ -58,7 +58,7 @@ export const Order: Orders[] = [
         color: ['red'],
         quantity: 1,
         price: 2850,
-        offer_price: 3050,
+        old_price: 3050,
         offer: 25,
         size: ['xl'],
       },
@@ -69,7 +69,7 @@ export const Order: Orders[] = [
         color: ['red'],
         quantity: 1,
         price: 2850,
-        offer_price: 3050,
+        old_price: 3050,
         offer: 25,
         size: ['xl'],
       },
@@ -92,7 +92,7 @@ export const Order: Orders[] = [
         color: ['red'],
         quantity: 2,
         price: 2850,
-        offer_price: 3050,
+        old_price: 3050,
         offer: '',
         size: ['xl'],
       },

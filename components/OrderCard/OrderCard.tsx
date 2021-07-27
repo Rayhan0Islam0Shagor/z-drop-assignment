@@ -6,8 +6,7 @@ import styles from './OrderCard.module.scss';
 const OrderCard = ({ product }) => {
   const [selected, setSelected] = useState(false);
 
-  const { name, img, color, quantity, price, offer_price, offer, size } =
-    product;
+  const { name, img, color, quantity, price, old_price, offer, size } = product;
 
   const handleClick = () => {
     setSelected(!selected);
@@ -39,12 +38,13 @@ const OrderCard = ({ product }) => {
           <div className={styles.price__section}>
             <p>Price: </p>
             <span>BDT. {price}</span>
-            {offer_price && (
-              <span className={styles.old_price}>BDT. {offer_price}</span>
+            {old_price && (
+              <span className={styles.old_price}>BDT. {old_price}</span>
             )}
             {offer && <span className={styles.offer}>{offer}% off</span>}
           </div>
         </div>
+
         <div className={styles.icons}>
           <RiIcons.RiHeart2Line
             color={selected ? 'red' : '#CECECE'}
