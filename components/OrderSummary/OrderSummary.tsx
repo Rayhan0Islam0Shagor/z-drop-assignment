@@ -63,6 +63,10 @@ const OrderSummary = () => {
         <button type="submit">Apply</button>
       </form>
 
+      {voucher && (
+        <small className={styles.coupon}>you use {voucher} coupon</small>
+      )}
+
       <div className={styles.total}>
         <p>Total</p>
         <p>BDT. 39,375</p>
