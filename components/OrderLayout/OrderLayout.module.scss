@@ -19,6 +19,7 @@
         height: 45px;
         width: 45px;
         margin-right: 10px;
+        cursor: pointer;
 
         div {
           border-radius: 50%;
@@ -29,6 +30,7 @@
         .brand__name {
           display: flex;
           align-items: center;
+          cursor: pointer;
 
           p {
             margin: 0;

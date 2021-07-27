@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import * as RiIcons from 'react-icons/ri';
 import Orders from '../Orders/Orders';
 import OrderSummary from '../OrderSummary/OrderSummary';

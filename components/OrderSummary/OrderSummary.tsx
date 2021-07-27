@@ -1,19 +1,32 @@
 import { useState } from 'react';
 import styles from './OrderSummary.module.scss';
 import * as IoIcons from 'react-icons/io';
-import { Vouchers } from '../../data/data';
+
+import { Vouchers, Order as OrderList } from '../../data/data';
 
 const OrderSummary = () => {
   const [visible, setVisible] = useState(false);
   const [voucher, setVoucher] = useState(null);
+  const [shippingCharge] = useState(600);
+  const [discount, setDiscount] = useState(0.0);
 
-  const handleClick = () => {
-    setVisible(!visible);
-  };
+  let subTotal = 0;
+  OrderList.forEach((order) => {
+    order.products.forEach((product) => {
+      subTotal += product.price * product.quantity;
+    });
+  });
 
   const submitHandler = (e) => {
     e.preventDefault();
+    const discountPrice = Math.floor(
+      subTotal * (voucher.amountOfDiscount / 100)
+    ).toFixed(2);
+
+    setDiscount(Number(discountPrice));
   };
+
+  const total = subTotal - discount + shippingCharge;
 
   return (
     <div className={styles.order__summary}>
@@ -26,19 +39,19 @@ const OrderSummary = () => {
           <p>
             Subtotal <span>(20 items)</span>
           </p>
-          <p>BDT. 38,850</p>
+          <p>BDT. {subTotal}</p>
         </div>
         <div className={styles.price}>
           <p>Discount</p>
-          <p>BDT. 0</p>
+          <p>BDT. {discount}</p>
         </div>
         <div className={styles.price}>
           <p>Shipping Charge</p>
-          <p>BDT. 600</p>
+          <p>BDT. {shippingCharge}</p>
         </div>
       </div>
 
-      <div className={styles.options} onClick={handleClick}>
+      <div className={styles.options} onClick={() => setVisible(!visible)}>
         <p>Gift Card, Coupons & Promotional Codes</p>
         {visible ? <IoIcons.IoIosArrowUp /> : <IoIcons.IoIosArrowDown />}
       </div>
@@ -48,7 +61,10 @@ const OrderSummary = () => {
           {Vouchers.map((voucher) => (
             <div
               key={voucher.id}
-              onClick={() => setVoucher(voucher.code)}
+              onClick={() => {
+                setVoucher(voucher);
+                setVisible(!visible);
+              }}
               className={styles.voucher}
             >
               <p>{voucher.Offer_desc}</p>
@@ -59,17 +75,21 @@ const OrderSummary = () => {
       )}
 
       <form className={styles.coupon__apply__form} onSubmit={submitHandler}>
-        <input type="text" placeholder="Voucher Code" defaultValue={voucher} />
+        <input
+          type="text"
+          placeholder="Voucher Code"
+          defaultValue={voucher?.code}
+        />
         <button type="submit">Apply</button>
       </form>
 
       {voucher && (
-        <small className={styles.coupon}>you use {voucher} coupon</small>
+        <small className={styles.coupon}>you use {voucher?.code} coupon</small>
       )}
 
       <div className={styles.total}>
         <p>Total</p>
-        <p>BDT. 39,375</p>
+        <p>BDT. {total}</p>
       </div>
     </div>
   );

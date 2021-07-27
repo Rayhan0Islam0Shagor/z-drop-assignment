@@ -27,6 +27,7 @@ const OrderLayout = ({ order }) => {
                   objectFit="cover"
                   src={Brand_img}
                   alt="logo"
+                  title={brand_name}
                 />
               )}
             </div>
